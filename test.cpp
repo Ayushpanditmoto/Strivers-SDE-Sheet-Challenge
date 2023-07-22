@@ -1,16 +1,23 @@
-// There is a farm containing trees numbered from 1 to N.  Milky believes in god, so she thinks that a tree can only be cut down if it's height is a Prime number. The height of the trees increases by 1 unit every day. So every day she goes to the farm and starts cutting trees whose height is a prime number. If there are multiple such trees in a day, she cuts them down in increasing order of the index.
+//  You are given an integer array nums. We consider an array good if it is a permutation of an array base[n].
 
-// Print the order of trees in which they will be cut down.
+// base[n] = [1, 2, ..., n - 1, n, n] (in other words, it is an array of length n + 1 which contains 1 to n - 1 exactly once, plus two occurrences of n). For example, base[1] = [1, 1] and base[3] = [1, 2, 3, 3].
 
-// Explanation
-// First day trees numbered 1 and 5 will be cut down, now the height of trees 2,3,4 will remains same.
+// Return true if the given array is good, otherwise return false.
 
-// Second day trees numbered 2 and 4 will be cut down, as there height will be 13 and 5 , now the height of tree 3 will be 99 it will remain there.
+class Solution {
+public:
+    bool isGood(vector<int>& nums) {
+        int n=nums.size();
+        int max_ele = max_element(n);
 
-// Third day no tree will be cut down as the height of the remaining tree is 100.
-
-// Fourth day tree 3 will be cut down as its height will be 101.
-
-#include <bits/stdc++.h>
-using namespace std;
-int 
+              
+    }
+    int max_element(int n){
+        int ans = INT_MIN;
+        for(int i=0;i<n;i++){
+            ans = max(ans,nums[i]);
+        }
+        return ans;
+    }
+   
+};
